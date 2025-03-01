@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Cheikhouna Sagnane</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            transition: all 0.3s ease-in-out;
+        }
+        .sidebar:hover {
+            transform: translateX(0);
+        }
+        .bg-orange-custom {
+            background-color: #f97316;
+        }
+        .hover-grow:hover {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        /* Arrière-plan animé des sections */
+        .animated-bg {
+            background: linear-gradient(45deg, #f97316, #fff7ed, #1f2937, #f97316);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        /* Arrière-plan animé noir pour les textes */
+        .animated-text-bg {
+            background: linear-gradient(45deg, #1f2937, #4b5563, #111827, #1f2937);
+            background-size: 400% 400%;
+            animation: textGradientAnimation 10s ease infinite;
+            color: #ffffff; /* Texte en blanc */
+        }
+        @keyframes textGradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar bg-orange-custom text-white w-64 h-screen fixed top-0 left-0 p-6 flex flex-col justify-between shadow-xl">
+        <div>
+            <h1 class="text-2xl font-bold mb-8">C.S.INFO</h1>
+            <nav>
+                <ul class="space-y-4">
+                    <li><a href="#accueil" class="nav-link block hover:bg-orange-600 p-2 rounded transition-colors" data-section="accueil">Accueil</a></li>
+                    <li><a href="#about" class="nav-link block hover:bg-orange-600 p-2 rounded transition-colors" data-section="about">À Propos</a></li>
+                    <li><a href="#projects" class="nav-link block hover:bg-orange-600 p-2 rounded transition-colors" data-section="projects">Projets</a></li>
+                    <li><a href="#competences" class="nav-link block hover:bg-orange-600 p-2 rounded transition-colors" data-section="competences">Compétences</a></li>
+                    <li><a href="#contact" class="nav-link block hover:bg-orange-600 p-2 rounded transition-colors" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="text-sm">© 2025 Cheikhouna</p>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1">
+        <!-- Accueil -->
+        <section id="accueil" class="section animated-bg min-h-screen flex items-center">
+            <div class="container mx-auto px-6" data-aos="fade-right">
+                <div class="flex items-center max-w-4xl mx-auto">
+                    <img src="photo/photo.jpg" alt="Ma Photo" class="w-32 h-32 rounded-full border-4 border-orange-custom mr-8">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-4 animated-text-bg p-3 rounded inline-block">Cheikhouna Sagnane</h2>
+                        <p class="text-lg animated-text-bg p-4 rounded mb-6">
+                            Bienvenue sur mon portfolio ! Je suis Cheikhouna Sagnane, un passionné d’informatique et de développement avec une soif insatiable d’apprendre et de créer. Depuis plusieurs années, je me consacre à explorer les multiples facettes de la technologie, que ce soit à travers la programmation en langages comme Java, Python et PHP, la conception de sites web dynamiques, ou encore la gestion des réseaux informatiques. Mon parcours m’a permis de développer une solide expertise technique, mais aussi une approche pragmatique pour concevoir des solutions qui répondent aux besoins réels des utilisateurs. Que ce soit pour coder une application, optimiser un réseau ou résoudre des problèmes complexes, je mets un point d’honneur à allier créativité et efficacité. Ce portfolio est une vitrine de mes projets, de mes compétences et de ma vision : utiliser la technologie pour simplifier la vie et ouvrir de nouvelles possibilités. Explorez mes réalisations et n’hésitez pas à me contacter pour discuter de vos idées ou collaborations potentielles !
+                        </p>
+                        <a href="mon cv/CV_Cheikhouna_Sagnane.pdf" target="_blank" class="bg-orange-custom hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition-colors">Télécharger mon CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- À Propos -->
+        <section id="about" class="section animated-bg min-h-screen flex items-center">
+            <div class="container mx-auto px-6" data-aos="fade-left">
+                <h2 class="text-3xl font-bold mb-8 animated-text-bg p-3 rounded inline-block">À Propos de Moi</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <p class="text-lg animated-text-bg p-4 rounded">
+                        Je m’appelle Cheikhouna Sagnane, et je suis un développeur web et spécialiste des réseaux informatiques animé par une passion profonde pour les nouvelles technologies. Mon aventure dans l’informatique a débuté il y a plusieurs années, lorsque j’ai découvert le pouvoir de la programmation pour transformer des idées en réalités concrètes. Depuis, j’ai exploré une multitude de domaines, allant du développement d’applications web et mobiles avec des langages comme HTML, CSS, JavaScript, PHP, Java et Python, à la mise en place et la gestion de réseaux informatiques sécurisés. Mon objectif est clair : concevoir des solutions qui allient simplicité, ergonomie et performance, tout en répondant aux attentes des utilisateurs et des entreprises. En parallèle de mon parcours académique en génie informatique, je me forme continuellement pour rester à la pointe des évolutions technologiques. J’ai acquis une expertise solide en bases de données, en cybersécurité et en outils bureautiques, ce qui me permet d’aborder des projets variés avec une vision globale. Mon ambition ? Devenir un acteur reconnu dans le domaine des technologies de l’information et contribuer à des projets innovants qui façonnent l’avenir numérique. Cette section est une invitation à découvrir qui je suis, ce qui me motive, et comment je peux mettre mes compétences au service de vos projets.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets -->
+        <section id="projects" class="section animated-bg min-h-screen flex items-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8 animated-text-bg p-3 rounded inline-block">Mes Projets</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover-grow" data-aos="zoom-in">
+                        <img src="photo/java2.jpg" alt="Gestion" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-center">Gestion des Informations</h3>
+                        <p class="text-center animated-text-bg p-2 rounded">Java</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover-grow" data-aos="zoom-in">
+                        <img src="photo/java.jpg" alt="Calculatrice" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-center">Calculatrice Simple</h3>
+                        <p class="text-center animated-text-bg p-2 rounded">JavaScript</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover-grow" data-aos="zoom-in">
+                        <img src="photo/lang.jpg" alt="Langage C" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-center">Projet en Langage C</h3>
+                        <p class="text-center animated-text-bg p-2 rounded">Langage C</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover-grow" data-aos="zoom-in">
+                        <img src="photo/python.jpg" alt="IMC" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-center">IMC & Analyse</h3>
+                        <p class="text-center animated-text-bg p-2 rounded">Python</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover-grow" data-aos="zoom-in">
+                        <img src="photo/uml.jpg" alt="Stationnement" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-center">Système de Stationnement</h3>
+                        <p class="text-center animated-text-bg p-2 rounded">UML</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover-grow" data-aos="zoom-in">
+                        <img src="photo/php.jpg" alt="Calculatrice PHP" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-center">Calculatrice Simple</h3>
+                        <p class="text-center animated-text-bg p-2 rounded">PHP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="competences" class="section animated-bg min-h-screen flex items-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-8 animated-text-bg p-3 rounded inline-block">Mes Compétences</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="flip-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold animated-text-bg px-2 py-1 rounded">PHP</span>
+                            <span class="text-white animated-text-bg px-2 py-1 rounded">50%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-4">
+                            <div class="bg-orange-custom rounded-full h-4" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="flip-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold animated-text-bg px-2 py-1 rounded">JavaScript</span>
+                            <span class="text-white animated-text-bg px-2 py-1 rounded">55%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-4">
+                            <div class="bg-orange-custom rounded-full h-4" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="flip-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold animated-text-bg px-2 py-1 rounded">Java</span>
+                            <span class="text-white animated-text-bg px-2 py-1 rounded">55%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-4">
+                            <div class="bg-orange-custom rounded-full h-4" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="flip-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold animated-text-bg px-2 py-1 rounded">Réseaux</span>
+                            <span class="text-white animated-text-bg px-2 py-1 rounded">75%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-4">
+                            <div class="bg-orange-custom rounded-full h-4" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="flip-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold animated-text-bg px-2 py-1 rounded">Bureautique</span>
+                            <span class="text-white animated-text-bg px-2 py-1 rounded">80%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-4">
+                            <div class="bg-orange-custom rounded-full h-4" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="flip-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-bold animated-text-bg px-2 py-1 rounded">Algorithme</span>
+                            <span class="text-white animated-text-bg px-2 py-1 rounded">65%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-4">
+                            <div class="bg-orange-custom rounded-full h-4" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section animated-bg min-h-screen flex items-center">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8 animated-text-bg p-3 rounded inline-block">Contactez-moi</h2>
+                <div class="max-w-lg mx-auto bg-gray-100 p-8 rounded-xl shadow-lg">
+                    <form id="contact-form">
+                        <input type="text" name="prenom" placeholder="Prénom" required class="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:border-orange-custom">
+                        <input type="email" name="email" placeholder="Email" required class="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:border-orange-custom">
+                        <textarea name="message" rows="4" placeholder="Message" required class="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:border-orange-custom"></textarea>
+                        <button type="submit" class="bg-orange-custom hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full w-full transition-colors">Envoyer</button>
+                    </form>
+                    <div id="form-message" class="mt-4 text-center"></div>
+                    <div class="mt-6 text-center">
+                        <p class="animated-text-bg p-2 rounded">N'hésitez pas à me contacter pour toute collaboration ou information.</p>
+                        <p class="animated-text-bg p-2 rounded"><strong>Email :</strong> sagnanecheikhouna7@gmail.com</p>
+                        <p class="animated-text-bg p-2 rounded mt-2"><strong>Téléphone :</strong> +221 77 704 11 73</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Gestion de l'affichage des sections
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+        document.getElementById('accueil').classList.add('active');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                sections.forEach(section => section.classList.remove('active'));
+                const sectionId = link.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+
+        // Gestion du formulaire avec AJAX
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            fetch('form/Contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('form-message').innerHTML = data;
+                this.reset();
+            })
+            .catch(error => {
+                document.getElementById('form-message').innerHTML = "<p class='text-red-500'>Erreur lors de l'envoi.</p>";
+                console.error('Erreur:', error);
+            });
+        });
+    </script>
+</body>
+</html>
